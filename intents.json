@@ -1,0 +1,398 @@
+{
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": [
+        "hola",
+        "buenas",
+        "buenos días",
+        "buen día",
+        "buenas tardes",
+        "buenas noches",
+        "hola bot",
+        "hola chatbot",
+        "hola asistente",
+        "alguien ahí",
+        "qué tal",
+        "cómo te va",
+        "hey"
+      ],
+      "responses": [
+        "¡Hola! Soy el asistente virtual de la Escuela Técnica N° 36 D.E. 15 'Almirante Guillermo Brown'. ¿En qué trámite, taller o consulta escolar te puedo orientar?"
+      ],
+      "titulo": "Saludo",
+      "sugerencias": [
+        "especialidades",
+        "inscripciones",
+        "horarios"
+      ]
+    },
+    {
+      "tag": "despedida",
+      "patterns": [
+        "chau",
+        "adiós",
+        "hasta luego",
+        "nos vemos",
+        "muchas gracias chau",
+        "eso es todo gracias",
+        "gracias por la info",
+        "hasta la próxima",
+        "bye",
+        "listo gracias"
+      ],
+      "responses": [
+        "¡De nada! Que tengas una excelente jornada. Si te queda alguna duda sobre la Técnica 36, acá estoy para ayudarte."
+      ],
+      "titulo": "Despedida",
+      "sugerencias": []
+    },
+    {
+      "tag": "agradecimiento",
+      "patterns": [
+        "gracias",
+        "muchas gracias",
+        "te lo agradezco",
+        "buenísimo gracias",
+        "genial gracias",
+        "muy amable",
+        "me sirvió mucho"
+      ],
+      "responses": [
+        "¡Un placer ayudarte! Recordá que también podés acercarte a Secretaría o Preceptoría en Galván 3700 si necesitás atención personalizada."
+      ],
+      "titulo": "Agradecimiento",
+      "sugerencias": []
+    },
+    {
+      "tag": "constancia_alumno_regular",
+      "patterns": [
+        "¿Cómo saco la constancia de alumno regular?",
+        "constancia de alumno regular",
+        "necesito certificado de estudio",
+        "papel para la obra social",
+        "constancia para anses",
+        "constancia para la sube",
+        "dónde pido certificado de alumno regular",
+        "cómo pido constancia de regularidad",
+        "certificado regular",
+        "papel de regular",
+        "solicitar constancia de alumno",
+        "trámite constancia regular"
+      ],
+      "responses": [
+        "Podés solicitar tu constancia de alumno regular en la Secretaría de la ET 36 (Galván 3700) de lunes a viernes en el horario de tu turno, o enviando un correo a info@et36.com.ar indicando nombre completo, DNI, año, división, turno y el motivo o destinatario (ANSES, obra social, SUBE, etc.). La demora habitual de entrega es de 48 a 72 horas hábiles."
+      ],
+      "titulo": "Constancia de alumno regular",
+      "sugerencias": [
+        "certificado_analitico",
+        "faltas",
+        "contacto_ubicacion"
+      ]
+    },
+    {
+      "tag": "certificado_analitico",
+      "patterns": [
+        "necesito mi certificado analítico",
+        "cómo saco el analítico",
+        "trámite de título secundario",
+        "constancia de título en trámite",
+        "cuándo está listo mi título",
+        "duplicado de analítico",
+        "legalización de título secundario",
+        "analítico parcial por pase de colegio",
+        "certificado analítico de egresado",
+        "retirar el analítico"
+      ],
+      "responses": [
+        "Para solicitar el certificado analítico (final o parcial) o la constancia de título en trámite, debés acercarte personalmente a la Secretaría de la escuela con tu DNI original. El título técnico se emite bajo el Sistema Federal de Títulos y requiere firma y legalización ante el GCBA. Para consultar el estado de tu título podés escribir a det_36_de15@bue.edu.ar."
+      ],
+      "titulo": "Certificado analitico",
+      "sugerencias": [
+        "constancia_alumno_regular",
+        "equivalencias",
+        "contacto_ubicacion"
+      ]
+    },
+    {
+      "tag": "practicas_profesionalizantes",
+      "patterns": [
+        "¿Cuándo empiezan las prácticas profesionalizantes?",
+        "requisitos para las pasantias",
+        "¿Qué necesito para hacer las prácticas?",
+        "cómo son las pasantías",
+        "prácticas profesionalizantes sexto año",
+        "dónde se hacen las prácticas profesionalizantes",
+        "cuántas horas son las prácticas profesionalizantes",
+        "convenio de pasantías",
+        "seguro para prácticas profesionalizantes",
+        "las pasantías son pagas",
+        "prácticas en empresas"
+      ],
+      "responses": [
+        "Las Prácticas Profesionalizantes (PP) son obligatorias según la Ley 26.058 para obtener el título técnico en 6.° año (mínimo de 200 horas reloj). Se desarrollan a contraturno durante el ciclo lectivo en empresas del sector (informática / construcción) o proyectos supervisados. Requisitos: ser alumno regular, talleres previos aprobados, ficha médica completa y convenio marco con seguro de ART gestionado por el GCBA."
+      ],
+      "titulo": "Practicas profesionalizantes",
+      "sugerencias": [
+        "seguridad_talleres",
+        "especialidades",
+        "horarios-taller"
+      ]
+    },
+    {
+      "tag": "seguridad_talleres",
+      "patterns": [
+        "protocolo de seguridad en talleres",
+        "normas de seguridad en el taller",
+        "qué ropa tengo que llevar al taller",
+        "cuál es la indumentaria obligatoria de taller",
+        "zapatos de seguridad mameluco guardapolvo",
+        "reglamento de seguridad y herramientas",
+        "gafas de protección y antiparras en taller",
+        "pelo recogido y accesorios en taller",
+        "qué pasa si no tengo calzado de seguridad en taller",
+        "elementos de protección personal epp",
+        "uso de máquinas y herramientas en taller"
+      ],
+      "responses": [
+        "Por protocolo de seguridad en los talleres de la ET 36 es obligatorio el uso de Elementos de Protección Personal (EPP): guardapolvo o mameluco de grafa azul/gris, calzado de seguridad con puntera reforzada y antiparras para operaciones con desprendimiento de virutas. Está terminantemente prohibido el uso de pelo suelto, cadenas, pulseras, bufandas o ropa holgada cerca de máquinas en movimiento. Ningún alumno debe operar máquinas herramientas sin la supervisión del Maestro de Enseñanza Práctica (MEP)."
+      ],
+      "titulo": "Seguridad en talleres",
+      "sugerencias": [
+        "horarios-taller",
+        "practicas_profesionalizantes",
+        "seguridad_laboratorio_computacion"
+      ]
+    },
+    {
+      "tag": "seguridad_laboratorio_computacion",
+      "patterns": [
+        "reglas del laboratorio de computación",
+        "normas en la sala de informática",
+        "se puede comer o tomar en el laboratorio de computación",
+        "cuidado de computadoras y redes",
+        "protocolo laboratorio de informática"
+      ],
+      "responses": [
+        "En los laboratorios de computación y redes de la ET 36 está estrictamente prohibido ingresar con alimentos, bebidas o líquidos. Se debe cuidar el equipamiento, no desconectar cables de red ni alimentación, y respetar las cuentas de usuario y software asignado por los docentes."
+      ],
+      "titulo": "Normas del laboratorio",
+      "sugerencias": [
+        "seguridad_talleres",
+        "especialidades",
+        "horarios-taller"
+      ]
+    },
+    {
+      "tag": "mesas_examen",
+      "patterns": [
+        "cuándo son las mesas de examen",
+        "fechas de previas",
+        "cómo me anoto a rendir materias previas",
+        "inscripción a mesas de examen",
+        "mesas de febrero y diciembre",
+        "turnos de examen para previas y equivalencias",
+        "dónde consultar fechas de mesas",
+        "rendir libre o previa",
+        "con cuánto se aprueba una previa",
+        "finestec para terminar la secundaria técnica"
+      ],
+      "responses": [
+        "Las mesas de examen para previas y libres se abren en los turnos oficiales fijados por el GCBA (generalmente febrero/marzo, julio/agosto y diciembre). La inscripción es obligatoria con anterioridad en Preceptoría o Secretaría presentando DNI. Las materias se acreditan ante un tribunal de 3 docentes con una calificación mínima de 6 (seis). Si ya terminaste de cursar y adeudás materias técnicas, consultá por el programa FINESTEC."
+      ],
+      "titulo": "Mesas de examen",
+      "sugerencias": [
+        "faltas",
+        "equivalencias",
+        "horarios"
+      ]
+    },
+    {
+      "tag": "equivalencias",
+      "patterns": [
+        "cómo tramitar equivalencias",
+        "trámite de equivalencias por cambio de escuela",
+        "vengo de otro colegio y quiero el pase",
+        "pase de escuela técnica",
+        "reconocimiento de materias aprobadas",
+        "movilidad y articulación de estudios"
+      ],
+      "responses": [
+        "El trámite de equivalencias por pase o movilidad interjurisdiccional se inicia en Secretaría presentando: DNI, constancia de pase, plan de estudios analítico de la escuela de origen debidamente legalizado con programas de las materias aprobadas. Secretaría y Regencia evaluarán las materias equivalentes según el plan de estudios técnico de CABA."
+      ],
+      "titulo": "Equivalencias y pases",
+      "sugerencias": [
+        "mesas_examen",
+        "certificado_analitico",
+        "inscripciones"
+      ]
+    },
+    {
+      "tag": "especialidades",
+      "patterns": [
+        "qué especialidades tiene la escuela",
+        "qué carreras tienen",
+        "qué carreras técnicas tienen",
+        "carreras de la escuela",
+        "carreras técnicas",
+        "qué se puede estudiar",
+        "qué carreras se pueden estudiar en la técnica 36",
+        "orientaciones de la técnica 36",
+        "título de técnico en computación",
+        "maestro mayor de obras",
+        "cuántos años dura la secundaria técnica",
+        "plan de estudios computación construcciones",
+        "talleres del ciclo básico",
+        "qué títulos otorgan",
+        "oferta académica",
+        "oferta educativa"
+      ],
+      "responses": [
+        "La Escuela Técnica N° 36 ofrece dos carreras técnicas oficiales con validez nacional y duración de 6 años: 1) Técnico en Computación (programación, redes, bases de datos y desarrollo de software) y 2) Maestro Mayor de Obras (Construcciones civiles, diseño, estructuras e instalaciones). En los primeros 2 años (Ciclo Básico) los alumnos rotan por todos los talleres (Electricidad, Carpintería, Metales, Dibujo Técnico e Informática) antes de definir su especialidad."
+      ],
+      "titulo": "Especialidades",
+      "sugerencias": [
+        "turnos",
+        "horarios-taller",
+        "practicas_profesionalizantes"
+      ]
+    },
+    {
+      "tag": "contacto_ubicacion",
+      "patterns": [
+        "dónde queda la técnica 36",
+        "dirección de la escuela",
+        "teléfono de la escuela",
+        "cómo llegar a la técnica 36",
+        "contacto de la escuela",
+        "correo de secretaría",
+        "en qué barrio está la técnica 36",
+        "polo educativo saavedra dirección",
+        "horarios de atención de la escuela"
+      ],
+      "responses": [
+        "La Escuela Técnica N° 36 D.E. 15 'Almte. Guillermo Brown' se encuentra en Galván 3700, Saavedra, CABA (dentro del Polo Educativo Saavedra). Teléfono: 11 5197-6276. Correos de contacto: info@et36.com.ar y det_36_de15@bue.edu.ar. La atención en Secretaría y Preceptoría funciona en los turnos mañana, tarde y vespertino/noche."
+      ],
+      "titulo": "Contacto y ubicacion",
+      "sugerencias": [
+        "horarios",
+        "inscripciones",
+        "cooperadora"
+      ]
+    },
+    {
+      "tag": "inscripciones",
+      "patterns": [
+        "cómo me anoto a la escuela",
+        "inscripciones a primer año",
+        "fechas de inscripción escolar",
+        "requisitos para anotarse en la técnica 36",
+        "estado de inscripción",
+        "formulario de inscripción en línea"
+      ],
+      "responses": [
+        "Las inscripciones a 1.° año de la secundaria técnica se realizan a través del Sistema de Inscripción en Línea del Gobierno de la Ciudad (buenosaires.gob.ar/educacion/estudiantes/inscripcionescolar) en las fechas que fija el calendario oficial. También podés consultar novedades y el estado de inscripción en la web institucional https://et36.com.ar o escribiendo a info@et36.com.ar."
+      ],
+      "titulo": "Inscripciones",
+      "sugerencias": [
+        "especialidades",
+        "turnos",
+        "contacto_ubicacion"
+      ]
+    },
+    {
+      "tag": "turnos",
+      "patterns": [
+        "que turnos hay para primer año",
+        "que turnos hay para segundo año",
+        "que turnos hay para tercer año",
+        "que turnos hay para cuarto año",
+        "que turnos hay quinto año",
+        "que turnos hay para sexto año",
+        "en que turno se cursa",
+        "que turnos hay"
+      ],
+      "responses": [
+        "En Ciclo Básico (Primer a Tercer año). Los alumnos pueden concurrir al Turno Mañana (TM) realizando talleres de rotación en el Turno Tarde (TT), o concurrir al Turno Tarde (TT) realizando talleres en el Turno Mañana (TM). En el Ciclo Superior (Cuarto a Sexto año) Para la especialidad de Computación pueden concurrir al Turno Mañana (TM) y Turno Tarde (TT), mientras que en la especialidad de Construcciones deben concurrir al Turno Vespertino (TV)."
+      ],
+      "titulo": "Turnos",
+      "sugerencias": [
+        "horarios",
+        "horarios-taller",
+        "especialidades"
+      ]
+    },
+    {
+      "tag": "horarios",
+      "patterns": [
+        "cual es el horario de entrada",
+        "cual es el horario de salida",
+        "cuales son los horarios",
+        "cuales son los horarios de entrada y salida",
+        "mostrame los horarios",
+        "horarios"
+      ],
+      "responses": [
+        "Los horarios de entrada para clases teoricas en el Turno Mañana (TM) es de 7:30 a 11:50 en Ciclo Basico y en Ciclo Superior el horario de entrada es la misma, y el horario de salida es variable segun la disponibilidad de horas."
+      ],
+      "titulo": "Horarios",
+      "sugerencias": [
+        "turnos",
+        "horarios-taller",
+        "faltas"
+      ]
+    },
+    {
+      "tag": "horarios-taller",
+      "patterns": [
+        "horarios de talleres rotativos",
+        "cuando se entra a los talleres rotativos",
+        "cuales son los horarios para talleres rotativos"
+      ],
+      "responses": [
+        "Los talleres rotativos tienen hora de ingreso a las 12:40  y terminan a las 17:00 de Lunes a Miercoles "
+      ],
+      "titulo": "Horarios de talleres",
+      "sugerencias": [
+        "seguridad_talleres",
+        "turnos",
+        "especialidades"
+      ]
+    },
+    {
+      "tag": "cooperadora",
+      "patterns": [
+        "tiene cooperadora",
+        "cual es la cooperadora",
+        "como puedo ayudar a la cooperadora",
+        "cuanto se paga de cooperadora"
+      ],
+      "responses": [
+        "Podés aportar a la Cooperadora de la escuela ya sea pagando la cuota o realizando donaciones y pequeños aportes a la comunidad, podés realizar 1 pago anual de $180.000, 3 cuotas de $70.000 (Marzo, Abril, Mayo) o 6 cuotas de $40.000 (de Marzo a Agosto). Para mas información podés visitar la cuenta oficial de Instagram -> @coopetecnica36"
+      ],
+      "titulo": "Cooperadora",
+      "sugerencias": [
+        "contacto_ubicacion",
+        "inscripciones"
+      ]
+    },
+    {
+      "tag": "faltas",
+      "patterns": [
+        "como justifico mis faltas",
+        "justificar faltas",
+        "faltas",
+        "certificado medico"
+      ],
+      "responses": [
+        "El alumno deberá concurrir con un 85% de asistencia en todas las materias para acreditar su aprobación, en el caso de tener que ausentarse a las clases el alumno deberá presentar un certificado medico por enfermedad o en el caso de ser deportista federado presentarse con un certificado oficial emitido por la federación a la que concurre para que no se compute una falta."
+      ],
+      "titulo": "Faltas y asistencia",
+      "sugerencias": [
+        "mesas_examen",
+        "horarios",
+        "constancia_alumno_regular"
+      ]
+    }
+  ]
+}

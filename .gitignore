@@ -1,0 +1,22 @@
+# Entornos virtuales Python
+.venv/
+venv/
+ENV/
+env/
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+# Node & Frontend
+landingGUI/node_modules/
+landingGUI/dist/
+*.local
+
+# IDE y Sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
