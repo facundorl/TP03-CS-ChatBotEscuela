@@ -30,7 +30,7 @@ function App() {
     scrollToBottom()
   }, [messages, loading])
 
-  // textoDirecto se usa cuando el usuario hace clic en un chip de sugerencia
+  
   const handleSend = async (e, textoDirecto = null) => {
     if (e) e.preventDefault()
     const query = (textoDirecto ?? input).trim()

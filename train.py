@@ -11,7 +11,7 @@ def normalize_text(text):
     text = text.lower()
     return ''.join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn')
 
-# 1. Cargar la base de conocimiento (intents.json)
+
 with open('intents.json', 'r', encoding='utf-8') as f:
     intents = json.load(f)
 
@@ -20,7 +20,7 @@ classes = []
 documents = []
 ignore_letters = ['?', '¿', '!', '¡', '.', ',', ':', ';', '(', ')', '"', '-']
 
-# 2. Preprocesamiento (Tokenización, limpieza y normalización de acentos)
+
 for intent in intents['intents']:
     for pattern in intent['patterns']:
         clean_pattern = normalize_text(pattern)
@@ -34,14 +34,14 @@ for intent in intents['intents']:
 words = sorted(list(set(words)))
 classes = sorted(list(set(classes)))
 
-# Guardar estructuras para usar en el servidor Flask
+
 pickle.dump(words, open('words.pkl', 'wb'))
 pickle.dump(classes, open('classes.pkl', 'wb'))
 
 print(f"Vocabulario ({len(words)} palabras normalizadas):", words[:12], "...")
 print(f"Clases ({len(classes)} intenciones):", classes)
 
-# 3. Crear el set de entrenamiento (Bolsa de palabras / Bag of Words)
+
 training = []
 output_empty = [0] * len(classes)
 
@@ -61,7 +61,7 @@ training = np.array(training, dtype=object)
 train_x = np.array(list(training[:, 0]))
 train_y = np.array(list(training[:, 1]))
 
-# 4. Arquitectura de la Red Neuronal (Modelado Keras)
+
 model = Sequential([
     Dense(128, input_shape=(len(train_x[0]),), activation='relu'),
     Dropout(0.5),
@@ -73,6 +73,6 @@ model = Sequential([
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 model.fit(train_x, train_y, epochs=200, batch_size=5, verbose=1)
 
-# Guardar el modelo entrenado
+
 model.save('chatbot_model.h5')
 print("¡Modelo re-entrenado y guardado con éxito como chatbot_model.h5!")

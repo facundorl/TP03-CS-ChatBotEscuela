@@ -6,9 +6,10 @@ import pickle
 import unicodedata
 import tensorflow as tf
 
-# Inicialización de la app Flask
+
 app = Flask(__name__)
-CORS(app)  # Permite solicitudes desde el frontend web
+app.json.ensure_ascii = False  
+CORS(app)  
 
 def normalize_text(text):
     """Normaliza texto: pasa a minúsculas y quita acentos/tildes para tolerar faltas de ortografía (RF-01)."""
@@ -23,10 +24,10 @@ classes = pickle.load(open('classes.pkl', 'rb'))
 with open('intents.json', 'r', encoding='utf-8') as f:
     intents = json.load(f)
 
-# Índice de intents por tag, para resolver rápido las sugerencias relacionadas
+
 INTENTS_BY_TAG = {i['tag']: i for i in intents['intents']}
 
-# Temas que se ofrecen cuando el bot no entiende la consulta (fallback)
+
 SUGERENCIAS_FALLBACK = ['especialidades', 'inscripciones', 'contacto_ubicacion']
 
 
@@ -75,10 +76,10 @@ def bow(sentence, words):
                 bag[i] = 1
     return np.array(bag)
 
-# Conectores y palabras vacías que por sí solas no determinan una intención
+
 STOPWORDS = {'de', 'la', 'el', 'en', 'para', 'con', 'por', 'un', 'una', 'los', 'las', 'y', 'o', 'al', 'del', 'se', 'lo', 'su', 'mi', 'tu', 'es', 'son', 'que'}
 
-# RUTA DE ESTADO (Para verificar en el navegador que el servidor está online)
+
 @app.route('/', methods=['GET'])
 def index():
     return jsonify({
@@ -87,7 +88,7 @@ def index():
         "endpoint_chat": "/chat (método POST)"
     })
 
-# RUTA DE RED PRINCIPAL (API REST solicitada en RF-03)
+# RUTA DE RED PRINCIPAL 
 @app.route('/chat', methods=['POST'])
 def chat():
     data = request.get_json(silent=True)
@@ -99,7 +100,7 @@ def chat():
         return jsonify({"response": "No enviaste ningún mensaje. Por favor, escribí tu consulta."}), 400
 
     sentence_words = clean_up_sentence(user_message)
-    # Verificar si al menos una palabra clave relevante (no únicamente conectores) está en el vocabulario
+
     recognized_meaningful = [w for w in sentence_words if w in words and w not in STOPWORDS]
 
     fallback_msg = (
@@ -116,16 +117,16 @@ def chat():
             "sugerencias": build_sugerencias(None)
         })
 
-    # 1. Predecir con la red neuronal
+
     p = bow(user_message, words)
     res = model.predict(np.array([p]), verbose=0)[0]
 
-    # 2. Filtrar por umbral de certeza (Requerimiento RF-04: Fallback si es < 60%)
+
     ERROR_THRESHOLD = 0.60
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
     results.sort(key=lambda x: x[1], reverse=True)
 
-    # 3. Determinar respuesta o aplicar Fallback
+
     response_text = ""
     intent_tag = None
     confidence = 0.0
