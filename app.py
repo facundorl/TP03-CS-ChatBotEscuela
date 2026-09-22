@@ -17,11 +17,11 @@ def normalize_text(text):
     return ''.join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn')
 
 # Cargar el modelo de IA entrenado y las estructuras de datos
-model = tf.keras.models.load_model('chatbot_model.h5')
+model = tf.keras.models.load_model(r'C:\Users\facundor632\Desktop\test\TP03-CS-ChatBotEscuela\chatbot_model.h5')
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 
-with open('intents.json', 'r', encoding='utf-8') as f:
+with open(r'C:\Users\facundor632\Desktop\test\TP03-CS-ChatBotEscuela\intents.json', 'r', encoding='utf-8') as f:
     intents = json.load(f)
 
 

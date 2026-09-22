@@ -12,7 +12,7 @@ def normalize_text(text):
     return ''.join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn')
 
 
-with open('intents.json', 'r', encoding='utf-8') as f:
+with open(r'C:\Users\facundor632\Desktop\test\TP03-CS-ChatBotEscuela\intents.json', 'r', encoding='utf-8') as f:
     intents = json.load(f)
 
 words = []
